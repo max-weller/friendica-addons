@@ -71,7 +71,7 @@ function simplechat_script(&$a,&$s) {
 	$url = $a->get_baseurl() . "/profile/". $r[0]["nickname"];
     $sec_token = get_config("simplechat", "sec_token");
 	$accessToken = $url."&".sha1($sec_token.$url);
-	$ifrUrl = "$chat_server#$accessToken";
+	$ifrUrl = "$chat_server#$accessToken&";
 	
 	// add javascript to start simpleChat
     $a->page['htmlhead'] .= <<<HEREDOC
